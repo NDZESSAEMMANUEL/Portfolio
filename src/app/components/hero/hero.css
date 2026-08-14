@@ -1,0 +1,108 @@
+main{
+    width: 95%;
+    height: 88rem;
+    display: flex;
+    gap: 3rem;
+}
+.hero__text{
+    flex: 1;
+    height: 100%;
+    gap: 1rem;
+}
+.hero__image{
+    flex: 1;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero__text > span {
+    font-size: 9.6rem;
+    font-weight: 800;
+    color: var(--text-color);
+}
+.hero__text > span.hero__texte__Developpeur{
+    background: linear-gradient(90deg, #7C3AED 0%, #C0008D 50%, #FFAED9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+p{
+    margin-top: 4.8rem;
+    color: var(--header-link);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+}
+.hero__text__button{
+    width: 53%;
+    height: 7.67rem;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero__text__button__1{
+        height: 6rem;
+        width: 19.64rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: linear-gradient(135deg, #7C3AED 0%, #C0008D 50%, #FFAED9 100%);
+        color: #FFFFFF;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        border: none;
+        border-radius: 999px;
+        padding: 14px 24px;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+}
+.hero__text__button__1 .arrow{
+      font-size: 16px;
+}
+.hero__text__button__1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(214, 36, 159, 0.35);
+}
+.hero__text__button__2{
+  background: #0D0A16;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  padding: 14px 28px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+.hero__text__button__2{
+    background:
+    linear-gradient(#0D0A16, #0D0A16) padding-box,
+    linear-gradient(135deg, #7C3AED 0%, #C0008D 50%, #FFAED9 100%) border-box;
+
+}
+.hero__text__button__2:hover {
+  transform: translateY(-2px);
+}
+.hero__image__space{
+    height: 54rem;
+    width: 52.2rem;
+    border-radius: 3.2rem;
+    border: 0.1px solid rgba(255, 255, 255, 0.12);
+    background-image: url("/assets/images/6.png");
+    backdrop-filter: blur(1.2rem);
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:155%;
+}
+.hero__image__space:hover{
+    border-color: rgba(255, 255, 255, 0.25);
+     transform: translateY(-4px);
+}
