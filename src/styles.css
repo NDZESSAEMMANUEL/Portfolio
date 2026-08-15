@@ -4,7 +4,10 @@
     --primary-color: linear-gradient(90deg, #7C3AED 0%, #C0008D 50%, #FFAED9 100%);
     --text-color:#E2E2E2;
     --text-active-color:#D2BBFF;
+    --header-link:#CCC3D8;
+    --header-div-background:rgba(7, 5, 15, 0.2);
     --font-family: 'Plus Jakarta Sans', sans-serif;
+    --hero-button-color: ;
 }
 *{
     box-sizing: border-box;
@@ -12,8 +15,8 @@
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
-
 }
-body{
+body {
     height: 100%;
+    background-color: hsl(0, 0%, 1%); 
 }

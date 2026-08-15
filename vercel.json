@@ -1,0 +1,3 @@
+{
+  "devCommand": "npx cross-env NG_ALLOWED_HOSTS=* ng serve --port $PORT"
+}

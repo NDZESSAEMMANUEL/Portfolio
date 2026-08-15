@@ -1,0 +1,124 @@
+main{
+    width: 100%;
+    min-height: 108rem;
+    background-color: #0e0b10;
+    background-image: url("/assets/images/2.png");
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #f4f2f6;
+    padding: 6rem 2rem 8rem;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main *{
+    box-sizing: border-box;
+}
+
+.toolbox-header{
+    text-align: center;
+    margin-bottom: 5.6rem;
+}
+
+.eyebrow{
+    display: inline-block;
+    font-size: 1.2rem;
+    letter-spacing: 0.12em;
+    color: #9c96a5;
+    border: 1px solid #3a3540;
+    border-radius: 999px;
+    padding: 0.6rem 1.6rem;
+    margin-bottom: 1.8rem;
+}
+
+.toolbox-header h1{
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.toolbox-header h1 .accent{
+    font-size: 4.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #7C3AED 0%, #C0008D 50%, #FFAED9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.columns{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.2rem;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.column h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 2rem;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+}
+
+.card {
+    aspect-ratio: 1 / 1;
+    border-radius: 1.8rem;
+    background: linear-gradient(160deg, #7a1fd6, #e0157a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0 8px 20px rgba(180, 20, 120, 0.15);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-0.5rem) scale(1.05);
+    border-color: rgba(255, 255, 255, 0.6);
+    opacity: 0.95;
+    box-shadow: 0 12px 30px rgba(224, 21, 122, 0.4);
+}
+.card img{
+    width: 2.6rem;
+    height: 2.6rem;
+    object-fit: contain;
+}
+
+.card i{
+    font-size: 2.6rem;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.card span{
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-align: center;
+    padding: 0 0.4rem;
+}
+
+@media (max-width: 900px){
+    .columns{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem 2.4rem;
+    }
+}
+
+@media (max-width: 480px){
+    .columns{
+        grid-template-columns: 1fr;
+    }
+    .toolbox-header h1{
+        font-size: 1.8rem;
+    }
+}

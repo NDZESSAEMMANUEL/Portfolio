@@ -1,0 +1,154 @@
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 1%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 0;
+}
+
+.main{
+    width: 95%;
+    max-width: 120rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.main h1{
+    font-size: 6.4rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.main h1 .accent{
+    font-size: 6.4rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #7C3AED 0%, #C0008D 50%, #FFAED9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.main__projet{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.project{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.project.reverse{
+    flex-direction: row-reverse;
+}
+
+.project__image{
+    flex: 1;
+    aspect-ratio: 16 / 10;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 2rem 6rem rgba(124, 58, 237, 0.25);
+}
+
+.project__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project__texte{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.project__texte h2{
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 5rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.project__texte p{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-weight: 400;
+    margin: 0;
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.8rem;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 0.5rem 1.6rem;
+    border-radius: 999rem;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #D2BBFF;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+@media (max-width: 800px){
+    .project,
+    .project.reverse{
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(160deg, #7a1fd6, #e0157a);
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(180, 20, 120, 0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-github:hover {
+  transform: translateY(-0.25rem) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 25px rgba(224, 21, 122, 0.45);
+  opacity: 0.95;
+}
+
+.btn-github:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-github .github-icon {
+  transition: transform 0.3s ease;
+}
+
+.btn-github:hover .github-icon {
+  transform: rotate(8deg) scale(1.1);
+}
