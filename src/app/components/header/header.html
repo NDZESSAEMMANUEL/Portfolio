@@ -1,18 +1,45 @@
 <main>
-    <div class="header__name">
-        <div class="header__name__first_letter">
-            E
+    <div class="header__brand">
+        <div class="header__name">
+            <div class="header__name__first_letter">
+                E
+            </div>
+            <span>
+                Ndzessa Emmanuel Fredy
+            </span>
         </div>
-        <span>
-            Ndzessa Emmanuel Fredy
-        </span>
+
+        <span class="header__divider"></span>
+
+        <a [href]="cv()" download class="header__cv-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 3v12"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <path d="M5 21h14"/>
+            </svg>
+            <span>CV</span>
+        </a>
     </div>
 
-    <div class="header__link">
-        <a href="#" class="active">Acceuil</a>
-        <a href="#">À propos</a>
-        <a href="#">Skills</a>
-        <a href="#">Projets</a>
-        <a href="#">Contact</a>
-    </div>
+    <nav class="header__link" [class.header__link--open]="menuOpen()">
+        <a href="#accueil" [class.active]="activeSection() === 'accueil'" (click)="goTo('accueil', $event)">Accueil</a>
+        <a href="#a-propos" [class.active]="activeSection() === 'a-propos'" (click)="goTo('a-propos', $event)">À propos</a>
+        <a href="#skills" [class.active]="activeSection() === 'skills'" (click)="goTo('skills', $event)">Skills</a>
+        <a href="#projets" [class.active]="activeSection() === 'projets'" (click)="goTo('projets', $event)">Projets</a>
+        <a href="#contact" [class.active]="activeSection() === 'contact'" (click)="goTo('contact', $event)">Contact</a>
+    </nav>
+
+    <button type="button"
+            class="header__burger"
+            [class.header__burger--active]="menuOpen()"
+            (click)="toggleMenu()"
+            [attr.aria-expanded]="menuOpen()"
+            aria-label="Ouvrir le menu de navigation"
+            aria-controls="header-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="header__overlay" [class.header__overlay--visible]="menuOpen()" (click)="closeMenu()"></div>
 </main>

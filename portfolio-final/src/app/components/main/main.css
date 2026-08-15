@@ -1,0 +1,27 @@
+main{
+    width: 100%;
+    display: block;
+}
+
+/* Le header (nav flottante + hero) partage désormais une seule et même
+   image de fond, pour éviter la "coupure" entre la nav et le hero. */
+header{
+    display: block;
+    width: 100%;
+    background-color: hsl(0, 0%, 1%);
+    background-image: url("/assets/images/1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Décale le point d'ancrage vers le bas pour que le contenu ne soit pas
+   masqué par la nav sticky lors d'un clic sur un lien du menu. */
+#accueil,
+app-about,
+app-skills,
+app-projet,
+app-contact{
+    scroll-margin-top: 9rem;
+}
