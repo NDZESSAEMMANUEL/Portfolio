@@ -54,14 +54,14 @@ htmlContent:
 `<p><b>Message :</b><br>${esc(message).replace(/\n/g, '<br>')}</p>`,
 });
 await sendEmail({
-sender: { name: 'Prénom Nom', email: SENDER },
+sender: { name: 'NDZESSA EMMANUEL', email: SENDER },
 to: [{ email, name }],
 subject: 'Merci pour votre message !',
 htmlContent:
 `<p>Bonjour ${esc(name)},</p>` +
 `<p>Merci de l'intérêt que vous portez à mon travail. ` +
 `J'ai bien reçu votre message et je reviens vers vous sous 48 h.</p>` +
-`<p>À très vite,<br>Prénom Nom</p>`,
+`<p>À très vite,<br>NDZESSA EMMANUEL</p>`,
 });
 return res.status(200).json({ ok: true });
 } catch (e) {
