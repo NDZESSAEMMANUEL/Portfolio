@@ -21,3 +21,9 @@ app-projet,
 app-contact{
     scroll-margin-top: 9rem;
 }
+app-header{
+    display: block; 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
